@@ -7,8 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
-    "start": "ember serve -pr http://localhost:2000",
+    "start": "ember build -w",
     "test": "ember test"
   },
   "repository": {

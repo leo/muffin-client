@@ -1,9 +1,7 @@
 {
-  "name": "muffin",
-  "version": "0.1.0",
-  "description": "The 21st century way of building websites",
+  "name": "client",
+  "version": "0.0.0",
   "private": true,
-  "main": "server/index.js",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -13,10 +11,6 @@
     "start": "ember serve -pr http://localhost:2000",
     "test": "ember test"
   },
-  "files": [
-    "server",
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/small-cake/client.git"
@@ -24,16 +18,6 @@
   "engines": {
     "node": "latest"
   },
-  "keywords": [
-    "cms",
-    "content",
-    "management",
-    "system",
-    "chocolate",
-    "yummy"
-  ],
-  "author": "Leonard Lamprecht <mindrun@icloud.com> (http://leo.im)",
-  "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
     "ember-ajax": "0.7.1",

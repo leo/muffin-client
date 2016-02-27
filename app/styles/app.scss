@@ -254,7 +254,7 @@ select {
       color: #949494;
       direction: rtl;
       display: inline-block;
-      background: url(images/down.svg) no-repeat right center;
+      background: url(../vectors/down.svg) no-repeat right center;
       padding-right: 20px;
       cursor: pointer;
       background-size: 10px;
@@ -361,7 +361,7 @@ select {
 
     a {
       display: inline-block;
-      background: url(images/file.svg) no-repeat left center;
+      background: url(../vectors/file.svg) no-repeat left center;
       padding-left: 35px;
       background-size: 13px;
     }

@@ -1,4 +1,6 @@
 import Ember from 'ember'
-import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin'
 
-export default Ember.Route.extend(ApplicationRouteMixin)
+import SimpleAuth from 'ember-simple-auth/mixins/application-route-mixin'
+import BodyClass from 'ember-body-class/mixins/body-class'
+
+export default Ember.Route.extend(SimpleAuth, BodyClass)

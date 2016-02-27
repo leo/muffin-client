@@ -899,7 +899,7 @@ select {
 
   @media (min-width: 992px) {
 
-    .dashboard & {
+    .index & {
       display: flex;
 
       > aside {
@@ -922,7 +922,7 @@ select {
 
     }
 
-    .dashboard &, .media & {
+    .index &, .media & {
       display: flex;
       justify-content: space-between;
     }

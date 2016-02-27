@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember serve -pr http://localhost:2000",
     "test": "ember test"
   },
   "files": [

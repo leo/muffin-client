@@ -1,53 +1,46 @@
-# Client
+<p align="center">
+  <a href="http://muffin.cafe">
+    <img src="http://i.imgur.com/buhMCWz.png" width="170">
+  </a>
+</p>
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# muffin
 
-## Prerequisites
+If you ask a experienced developer what he's thinking about content management systems, he'll probably tell you that he doesn't like them since they're bloated, overkill and slow as fuck. Muffin would like to change that.
 
-You will need the following things properly installed on your computer.
+Of course it doesn't yet have those cool features which all the other cool kids on the block are showing off, but it's very ambitious and always has an open ear for feedback from all angles!
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Requirements
 
-## Installation
+To be able to use muffin, you'll need **the latest version** of those things. So please make sure they're updated before trying out this application. After installing node.js, please also make sure to [fix your npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+- [Node.js](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.org)
+- [Yeoman](http://yeoman.io) and [Muffin's generator](https://www.npmjs.com/package/generator-muffin)
+- [Ember CLI](http://ember-cli.com)
 
-## Running / Development
+## Use me
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Please firstly make sure that your database is available. On your local machine, the easiest way to start MongoDB is by running the following command:
 
-### Code Generators
+```bash
+mongod
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+After that, simply use our neat Yeoman generator (which you've already installed previously) to generate a new boilerplate within the current directory:
 
-### Running Tests
+```bash
+yo muffin
+```
 
-* `ember test`
-* `ember test --server`
+You'll then be asked to enter a few details about your site and the database connection. After you've answered all questions, your new site will be prepared. As soon as the setup is finished, use the following command to run muffin:
 
-### Building
+```bash
+npm start
+```
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+That's all! :loudspeaker: :turtle:
 
-### Deploying
+## Contribute
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+To help us with development, please read [this](CONTRIBUTING.md).

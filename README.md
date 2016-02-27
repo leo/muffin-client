@@ -18,6 +18,8 @@ To be able to use muffin, you'll need **the latest version** of those things. So
 - [MongoDB](https://www.mongodb.org)
 - [Yeoman](http://yeoman.io) and [Muffin's generator](https://www.npmjs.com/package/generator-muffin)
 - [Ember CLI](http://ember-cli.com)
+- [PhantomJS](https://www.npmjs.com/package/phantomjs-prebuilt)
+- [Watchman](https://facebook.github.io/watchman/)
 
 ## Use me
 

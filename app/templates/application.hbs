@@ -1,3 +1,74 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#unless outer}}
 
-{{outlet}}
+  <header id="chest">
+    <div class="inner">
+
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Pages</a>
+        <a href="#">Users</a>
+        <a href="#">Media</a>
+        <a href="#">Logout</a>
+      </nav>
+
+      <a href="/admin" class="logo"></a>
+
+      <a href="#menu" class="toggle">
+        <span>
+          <b></b>
+          <b></b>
+          <b></b>
+        </span>
+      </a>
+
+    </div>
+  </header>
+
+  <main id="belly">
+
+    <aside id="title">
+      <div class="inner">
+
+        {{#if editableTitle}}
+
+          <h1 contenteditable="true">{{pageTitle}}</h1>
+
+          <nav>
+            <a href="#" class="current">Content</a>
+            <a href="#">Sidebar</a>
+            <a href="#">Options</a>
+          </nav>
+
+        {{else}}
+          <h1>{{pageTitle}}</h1>
+        {{/if}}
+
+        {{#if list}}
+          <a href="#" class="add">&plus;</a>
+        {{/if}}
+
+      </div>
+    </aside>
+
+    <section id="content" class={{divide}}>
+      {{#if message}}
+        <p class="message {{message.type}}">{{message.content}}</p>
+      {{/if}}
+
+      {{outlet}}
+    </section>
+
+  </main>
+
+  <footer id="ass">
+
+    <div class="inner">
+      <a href="http://muff.in" target="_blank"></a>
+      <p>You're using Muffin {{app-version}}, thank you!</p>
+    </div>
+
+  </footer>
+
+{{else}}
+  {{outlet}}
+{{/unless}}

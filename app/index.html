@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Client</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Muffin</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="robots" content="noindex">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     {{content-for "head"}}
 
+    <link rel="apple-touch-icon" href="/admin/touch-icon.png">
+
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300">
 
     {{content-for "head-footer"}}
   </head>
+
   <body>
     {{content-for "body"}}
 
@@ -22,4 +30,5 @@
 
     {{content-for "body-footer"}}
   </body>
+
 </html>

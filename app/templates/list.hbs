@@ -1,0 +1,70 @@
+<table class="list">
+
+  <thead>
+    <tr>
+      <td><input type="checkbox" class="above"></td>
+      <td>Title</td>
+
+      {{#ifRow 'author'}}
+        <td>Author</td>
+      {{/ifRow}}
+
+      {{#ifRow 'dates'}}
+        <td>Date</td>
+      {{/ifRow}}
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    {{#each items}}
+
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>
+
+        <a href="/admin/{{../slug}}/{{id}}" class="title">{{title}}</a>
+
+        <ul>
+          <li class="edit"><a href="/admin/{{../slug}}/{{id}}">Edit</a></li>
+          <li class="delete"><a href="/admin/{{../slug}}/delete/{{id}}">Delete</a></li>
+
+          {{#if author}}
+            <li class="view"><a href="/{{slug}}" target="_blank">View</a></li>
+          {{/if}}
+        </ul>
+
+      </td>
+
+      {{#if author}}
+        <td><a href="#" class="author">{{author}}</a></td>
+      {{/if}}
+
+      {{#if localeDates}}
+        <td>{{localeDates.updated}}</td>
+      {{/if}}
+
+    </tr>
+
+    {{/each}}
+
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td><input type="checkbox" class="above"></td>
+      <td>Title</td>
+
+      {{#ifRow 'author'}}
+        <td>Author</td>
+      {{/ifRow}}
+
+      {{#ifRow 'dates'}}
+        <td>Date</td>
+      {{/ifRow}}
+
+    </tr>
+  </tfoot>
+
+</table>

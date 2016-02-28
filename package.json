@@ -7,8 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember build -w",
-    "test": "ember test"
+    "start": "ember build -w -o ../server/dist",
+    "test": "ember test",
+    "prepare": "ember build -o ../server/dist -prod"
   },
   "repository": {
     "type": "git",

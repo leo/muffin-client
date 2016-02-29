@@ -17,11 +17,11 @@
       <td><input type="checkbox"></td>
       <td>
 
-        <a href="/admin/{{../slug}}/{{item.id}}" class="title">{{item.title}}</a>
+        <a href="/admin/pages/{{item.id}}" class="title">{{item.title}}</a>
 
         <ul>
-          <li class="edit"><a href="/admin/{{../slug}}/{{item.id}}">Edit</a></li>
-          <li class="delete"><a href="/admin/{{../slug}}/delete/{{item.id}}">Delete</a></li>
+          <li class="edit"><a href="/admin/pages/{{item.id}}">Edit</a></li>
+          <li class="delete"><a href="/admin/pages/delete/{{item.id}}">Delete</a></li>
 
           {{#if item.author}}
             <li class="view"><a href="/{{item.slug}}" target="_blank">View</a></li>

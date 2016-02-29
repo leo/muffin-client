@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="http://muffin.cafe">
+    <img src="http://i.imgur.com/buhMCWz.png" width="170">
+  </a>
+</p>
+
 # muffin
 
 This repository contains the Ember app that handles muffin's admin area.

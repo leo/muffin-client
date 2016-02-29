@@ -9,7 +9,8 @@
   "scripts": {
     "start": "ember build -w -o ../server/dist",
     "test": "ember test",
-    "prepare": "ember build -o ../server/dist -prod"
+    "prepare": "ember build -o ../server/dist -prod",
+    "install": "bower install"
   },
   "repository": {
     "type": "git",

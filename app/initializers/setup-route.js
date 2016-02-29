@@ -6,6 +6,7 @@ export function initialize () {
     breadcrumbs: [],
     setupController: function (controller, model) {
       this._super(controller, model)
+      document.title = this.pageTitle + ' — Muffin'
 
       var app = this.controllerFor('application')
 

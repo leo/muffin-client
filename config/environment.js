@@ -49,8 +49,14 @@ module.exports = function(environment) {
   }
 
   ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token',
     routeIfAlreadyAuthenticated: 'index',
-    routeAfterAuthentication: 'index'
+    routeAfterAuthentication: 'index',
+    crossOriginWhitelist: ['*']
+  }
+
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: '/token'
   }
 
   return ENV

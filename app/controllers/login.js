@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  session: Ember.inject.service('session'),
+  session: Ember.inject.service(),
 
   actions: {
     authenticate() {
@@ -9,9 +9,9 @@ export default Ember.Controller.extend({
         return
       }
 
-      let { username, password } = this.getProperties( 'username', 'password' )
+      let credentials = this.getProperties( 'identification', 'password' )
 
-      this.get('session').authenticate('authenticator:oauth2', username, password).catch(reason => {
+      this.get('session').authenticate('authenticator:jwt', credentials).catch(reason => {
         var timeout
 
         clearTimeout(timeout)

@@ -12,7 +12,7 @@ export default Ember.Route.extend(AuthenticatedRoute, {
   parentController: Ember.computed(function () {
     return this.controllerFor('application')
   }),
-  setupController: function (controller, model) {
+  setupController (controller, model) {
     this._super(controller, model)
     this.get('parentController').set('outer', false)
   }

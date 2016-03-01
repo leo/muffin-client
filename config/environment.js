@@ -55,7 +55,9 @@ module.exports = function(environment) {
   }
 
   ENV['ember-simple-auth-token'] = {
-    serverTokenEndpoint: '/token'
+    timeFactor: 1000,
+    refreshLeeway: 120,
+    refreshAccessTokens: true
   }
 
   return ENV

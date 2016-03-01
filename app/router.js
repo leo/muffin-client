@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('reset-password');
   this.route('pages');
   this.route('users');
+  this.route('media');
 });
 
 export default Router;

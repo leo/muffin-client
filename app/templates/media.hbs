@@ -1,0 +1,69 @@
+<aside id="sidebar">
+
+  <details class="box" open>
+    <summary>Filter</summary>
+    <table class="filter">
+
+      <tr>
+        <td>Dates:</td>
+        <td>
+          <select>
+            <option selected>All</option>
+            <option>September 2015</option>
+            <option>October 2015</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>File type:</td>
+        <td>
+          <select>
+            <option selected>All</option>
+            <option>Image</option>
+            <option>Video</option>
+            <option>Document</option>
+            <option>Audio</option>
+          </select>
+        </td>
+      </tr>
+
+    </table>
+  </details>
+
+</aside>
+
+<ul id="files">
+
+  {{#each files}}
+
+    <li class="dz-image-preview">
+      <figure>
+        <img data-dz-thumbnail src="/uploads/{{filename}}">
+      </figure>
+    </li>
+
+  {{/each}}
+
+</ul>
+
+<div id="preview-template" hidden>
+
+  <li>
+    <figure>
+      <img data-dz-thumbnail>
+
+      <figcaption>
+        <span data-dz-uploadprogress></span>
+      </figcaption>
+
+    </figure>
+  </li>
+
+</div>
+
+<div id="drop-zone">
+  <section>
+    <h1>Drop it here!</h1>
+  </section>
+</div>

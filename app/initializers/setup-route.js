@@ -3,7 +3,6 @@ import Ember from 'ember'
 export function initialize () {
   Ember.Route.reopen({
     pageTitle: '',
-    breadcrumbs: [],
     setupController: function (controller, model) {
       this._super(controller, model)
       document.title = this.pageTitle + ' — Muffin'
@@ -12,7 +11,6 @@ export function initialize () {
 
       if (app) {
         app.set('pageTitle', this.pageTitle)
-        app.set('breadcrumbs', this.breadcrumbs)
       }
     }
   })

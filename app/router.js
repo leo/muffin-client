@@ -11,7 +11,9 @@ Router.map(function() {
   this.route('pages', function() {
     this.route('edit', { path: '/:page_id' } );
   });
-  this.route('users');
+  this.route('users', function() {
+    this.route('edit', { path: '/:user_id' });
+  });
   this.route('media');
 });
 

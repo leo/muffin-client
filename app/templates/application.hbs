@@ -1,4 +1,4 @@
-{{#unless outer}}
+{{#if session.isAuthenticated}}
 
   <header id="chest">
     <div class="inner">
@@ -71,4 +71,4 @@
 
 {{else}}
   {{outlet}}
-{{/unless}}
+{{/if}}

@@ -8,12 +8,5 @@ export default Ember.Route.extend(Authenticated, {
   },
   model () {
     return this.store.findAll('user')
-  },
-  parentController: Ember.computed(function () {
-    return this.controllerFor('application')
-  }),
-  setupController (controller, model) {
-    this._super(controller, model)
-    this.get('parentController').set('outer', false)
   }
 })

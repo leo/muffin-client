@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('reset-password');
-  this.route('pages');
+  this.route('pages', function() {
+    this.route('edit', { path: '/:page_id' } );
+  });
   this.route('users');
   this.route('media');
 });

@@ -3,7 +3,7 @@ import Authenticated from 'ember-simple-auth/mixins/authenticated-route-mixin'
 
 export default Ember.Route.extend(Authenticated, {
   pageTitle: Ember.computed(function () {
-    return this.get('currentModel')
+    return 'Test'
   }),
   renderTemplate () {
     this.render('edit')

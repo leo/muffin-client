@@ -7,7 +7,7 @@
     {{#each model as |item|}}
 
     <tr>
-      <td><input type="checkbox"></td>
+      <td>{{input type="checkbox" name=item.id}}</td>
       <td>
 
         <a href="/admin/{{routeName}}/{{item.id}}" class="title">{{item.title}}</a>

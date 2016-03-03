@@ -10,7 +10,9 @@
       <td>{{input type="checkbox" name=item.id}}</td>
       <td>
 
-        <a href="/admin/{{routeName}}/{{item.id}}" class="title">{{item.title}}</a>
+        {{#link-to "pages.edit" item class="title"}}
+          {{item.title}}
+        {{/link-to}}
 
         <ul>
           <li class="edit"><a href="/admin/{{routeName}}/{{item.id}}">Edit</a></li>
@@ -24,7 +26,11 @@
       </td>
 
       {{#if item.author}}
-        <td><a href="/admin/users/{{item.author}}" class="author">{{item.author}}</a></td>
+        <td>
+          {{#link-to "users.edit" item.author class="author"}}
+            {{item.author}}
+          {{/link-to}}
+        </td>
       {{/if}}
 
       {{#if item.updatedAt}}

@@ -10,7 +10,7 @@
       <td>{{input type="checkbox" name=item.id}}</td>
       <td>
 
-        {{#link-to "pages.edit" item class="title"}}
+        {{#link-to (concat routeName '.edit') item class="title"}}
           {{item.title}}
         {{/link-to}}
 

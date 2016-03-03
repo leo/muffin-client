@@ -15,8 +15,13 @@
         {{/link-to}}
 
         <ul>
-          <li class="edit"><a href="/admin/{{routeName}}/{{item.id}}">Edit</a></li>
-          <li class="delete"><a href="/admin/{{routeName}}/delete/{{item.id}}">Delete</a></li>
+          <li class="edit">
+            {{#link-to (concat routeName '.edit') item}}Edit{{/link-to}}
+          </li>
+
+          <li class="delete">
+            {{#link-to (concat routeName '.delete') item}}Delete{{/link-to}}
+          </li>
 
           {{#if item.author}}
             <li class="view"><a href="/{{item.slug}}" target="_blank">View</a></li>

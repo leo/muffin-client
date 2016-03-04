@@ -25,10 +25,6 @@ body {
   user-select: none;
   -webkit-touch-callout: none;
 
-  &.dz-drag-hover {
-    overflow: hidden;
-  }
-
   @media (min-width: 992px) {
     padding-top: 55px;
 
@@ -951,24 +947,6 @@ select {
     padding: 5px;
     box-sizing: border-box;
 
-    &.dz-image-preview {
-
-      figure {
-        border: 1px solid #DADADA;
-
-        img {
-          opacity: 1;
-          pointer-events: none;
-        }
-
-      }
-
-      figcaption {
-        opacity: 0;
-      }
-
-    }
-
     figure {
       display: block;
       overflow: hidden;
@@ -976,7 +954,7 @@ select {
       cursor: pointer;
       box-sizing: border-box;
       margin: 0;
-      border: 2px dashed #FF4136;
+      border: 1px solid #DADADA;
 
       &:before {
         content: '';
@@ -992,6 +970,7 @@ select {
         width: 100%;
         opacity: 1;
         transition: opacity 1s ease;
+        opacity: 0;
 
         span {
           background: #FF4136;
@@ -1008,10 +987,9 @@ select {
       position: absolute;
       left: 0;
       top: 0;
-      transition: opacity 1s ease;
       width: 100%;
       height: 100%;
-      opacity: 0;
+      pointer-events: none;
     }
 
   }

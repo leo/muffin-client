@@ -29,5 +29,8 @@ export default Ember.Route.extend(Authenticated, {
         record.rollback()
       })
     }
+  },
+  model () {
+    return this.store.findAll('file')
   }
 })

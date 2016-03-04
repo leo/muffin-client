@@ -1215,34 +1215,32 @@ select {
 
 }
 
-#drop-zone {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #4FC8E7;
+.pl-uploader {
   display: none;
-  z-index: 2000;
 
-  &.shown {
-    display: block;
+  [id*="dropzone"] {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #4FC8E7;
+    z-index: 2000;
+
+    section {
+      border: 2px dashed white;
+      height: calc(100vh - 50px);
+      width: calc(100vw - 50px);
+      margin: 25px;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+    }
   }
-
-  section {
-    border: 2px dashed white;
-    height: calc(100vh - 50px);
-    width: calc(100vw - 50px);
-    margin: 25px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 32px;
-  }
-
 }

@@ -5,9 +5,6 @@ const { get, set } = Ember
 
 export default Ember.Route.extend(Authenticated, {
   pageTitle: 'Media',
-  init () {
-    $('body').on('dragenter dragleave', this.toggleDropzone)
-  },
   toggleDropzone (event) {
     $('body').toggleClass('dz-open')
   },
@@ -36,6 +33,12 @@ export default Ember.Route.extend(Authenticated, {
       }, () => {
         record.rollback()
       })
+    },
+    willTransition () {
+      $('body').unbind('dragenter dragleave', this.toggleDropzone)
+    },
+    didTransition () {
+      $('body').on('dragenter dragleave', this.toggleDropzone)
     }
   },
   model () {

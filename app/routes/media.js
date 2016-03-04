@@ -5,10 +5,18 @@ const { get, set } = Ember
 
 export default Ember.Route.extend(Authenticated, {
   pageTitle: 'Media',
+  init () {
+    $('body').on('dragenter dragleave', this.toggleDropzone)
+  },
+  toggleDropzone (event) {
+    $('body').toggleClass('dz-open')
+  },
   actions: {
     uploadImage (file) {
       const properties = ['type', 'size', 'name']
       var details = {}
+
+      $('body').removeClass('dz-open')
 
       for (var property of properties) {
         details[property] = get(file, property)

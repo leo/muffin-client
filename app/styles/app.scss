@@ -1218,6 +1218,10 @@ select {
 .pl-uploader {
   display: none;
 
+  .dz-open & {
+    display: block;
+  }
+
   [id*="dropzone"] {
     position: fixed;
     top: 0;

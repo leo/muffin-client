@@ -35,35 +35,10 @@
 
 <ul id="files">
 
-  {{#each files}}
-
-    <li class="dz-image-preview">
-      <figure>
-        <img data-dz-thumbnail src="/uploads/{{filename}}">
-      </figure>
-    </li>
-
-  {{/each}}
+  {{#file-picker accept=".jpg,.jpeg,.gif,.png" fileLoaded="fileLoaded" readAs="readAsDataURL" multiple=true}}
+    <section>
+      <h1>Drop it here!</h1>
+    </section>
+  {{/file-picker}}
 
 </ul>
-
-<div id="preview-template" hidden>
-
-  <li>
-    <figure>
-      <img data-dz-thumbnail>
-
-      <figcaption>
-        <span data-dz-uploadprogress></span>
-      </figcaption>
-
-    </figure>
-  </li>
-
-</div>
-
-<div id="drop-zone">
-  <section>
-    <h1>Drop it here!</h1>
-  </section>
-</div>

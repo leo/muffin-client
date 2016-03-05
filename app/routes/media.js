@@ -36,8 +36,6 @@ export default Ember.Route.extend(Authenticated, {
           for (var property in response.body) {
             set(record, property, response.body[property])
           }
-
-          return record.save()
         }, () => {
           record.rollback()
         })

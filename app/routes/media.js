@@ -33,8 +33,10 @@ export default Ember.Route.extend(Authenticated, {
         settings.headers[headerName] = headerValue
 
         file.upload(settings).then(response => {
-          //set(record, 'url', response.headers.Location)
-          console.log(response)
+          for (var property in response.body) {
+            set(record, property, response.body[property])
+          }
+
           return record.save()
         }, () => {
           record.rollback()

@@ -21,17 +21,26 @@ export default Ember.Route.extend(Authenticated, {
 
       const record = this.store.createRecord('file', details)
 
+      var settings = {
+        url: '/api/upload',
+        headers: {}
+      }
+
       file.read().then(url => {
         if (get(record, 'url') == null) {
           set(record, 'url', url)
         }
       })
 
-      file.upload('/api/upload').then(response => {
-        set(record, 'url', response.headers.Location)
-        return record.save()
-      }, () => {
-        record.rollback()
+      this.get('session').authorize('authorizer:token', (headerName, headerValue) => {
+        settings.headers[headerName] = headerValue
+
+        file.upload(settings).then(response => {
+          set(record, 'url', response.headers.Location)
+          return record.save()
+        }, () => {
+          record.rollback()
+        })
       })
     },
     willTransition () {

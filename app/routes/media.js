@@ -10,16 +10,13 @@ export default Ember.Route.extend(Authenticated, {
   },
   actions: {
     uploadImage (file) {
-      const properties = ['type', 'size', 'name']
-      var details = {}
+      const record = this.store.createRecord('file', {
+        filename: get(file, 'name'),
+        contentType: get(file, 'type'),
+        length: get(file, 'size')
+      })
 
       $('body').removeClass('dz-open')
-
-      for (var property of properties) {
-        details[property] = get(file, property)
-      }
-
-      const record = this.store.createRecord('file', details)
 
       var settings = {
         url: '/api/upload',
@@ -36,7 +33,8 @@ export default Ember.Route.extend(Authenticated, {
         settings.headers[headerName] = headerValue
 
         file.upload(settings).then(response => {
-          set(record, 'url', response.headers.Location)
+          //set(record, 'url', response.headers.Location)
+          console.log(response)
           return record.save()
         }, () => {
           record.rollback()

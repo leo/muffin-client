@@ -3,6 +3,8 @@ import Ember from 'ember'
 export function initialize () {
   Ember.Route.reopen({
     pageTitle: '',
+    list: false,
+    editableTitle: false,
     setupController: function (controller, model) {
       this._super(controller, model)
       document.title = this.pageTitle + ' — Muffin'
@@ -11,6 +13,8 @@ export function initialize () {
 
       if (app) {
         app.set('pageTitle', this.pageTitle)
+        app.set('list', this.list)
+        app.set('editableTitle', this.editableTitle)
       }
     }
   })

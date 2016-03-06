@@ -5,6 +5,7 @@ const { get, set } = Ember
 
 export default Ember.Route.extend(Authenticated, {
   pageTitle: 'Media',
+  list: true,
   toggleDropzone () {
     $('body').toggleClass('dz-open')
   },

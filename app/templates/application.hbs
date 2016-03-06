@@ -43,7 +43,9 @@
           <h1>{{pageTitle}}</h1>
         {{/if}}
 
-        <a href="#" class="add" id="add-file">&plus;</a>
+        {{#if list}}
+          <a href="#" class="add" id="add-file">&plus;</a>
+        {{/if}}
 
       </div>
     </aside>

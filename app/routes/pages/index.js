@@ -4,6 +4,7 @@ import RouteName from '../../mixins/route-name'
 
 export default Ember.Route.extend(Authenticated, RouteName, {
   pageTitle: 'Pages',
+  list: true,
   renderTemplate () {
     this.render('list')
   },

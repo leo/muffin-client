@@ -1,4 +1,5 @@
 import Ember from 'ember'
+const { getOwner } = Ember
 
 export function initialize () {
   Ember.Route.reopen({
@@ -7,9 +8,18 @@ export function initialize () {
     editableTitle: false,
     setupController (controller, model) {
       this._super(controller, model)
-      document.title = this.pageTitle + ' — Muffin'
 
-      var app = this.controllerFor('application')
+      const app = this.controllerFor('application')
+      const nameParts = this.routeName.split('.')
+      const ending = ' — Muffin'
+
+      // Check if route has a parent
+      if (nameParts.length > 1 && nameParts[1] !== 'index') {
+        const parent = getOwner(this).lookup('route:' + nameParts[0] + '.index')
+        document.title = this.pageTitle + ' ‹ ' + parent.get('pageTitle') + ending
+      } else {
+        document.title = this.pageTitle + ending
+      }
 
       if (app) {
         app.set('pageTitle', this.pageTitle)

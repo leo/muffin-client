@@ -10,5 +10,14 @@ export default Ember.Route.extend(Authenticated, RouteName, {
   },
   model () {
     return this.store.findAll('page')
+  },
+  actions: {
+    delete (page) {
+      page.deleteRecord()
+
+      if (page.get('isDeleted')) {
+        page.save()
+      }
+    }
   }
 })

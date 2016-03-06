@@ -5,7 +5,7 @@ export function initialize () {
     pageTitle: '',
     list: false,
     editableTitle: false,
-    setupController: function (controller, model) {
+    setupController (controller, model) {
       this._super(controller, model)
       document.title = this.pageTitle + ' — Muffin'
 

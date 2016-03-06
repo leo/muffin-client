@@ -9,17 +9,18 @@ export function initialize () {
     setupController (controller, model) {
       this._super(controller, model)
 
+      var middle = false
+
       const app = this.controllerFor('application')
       const nameParts = this.routeName.split('.')
-      const ending = ' — Muffin'
 
       // Check if route has a parent
       if (nameParts.length > 1 && nameParts[1] !== 'index') {
         const parent = getOwner(this).lookup('route:' + nameParts[0] + '.index')
-        document.title = this.pageTitle + ' ‹ ' + parent.get('pageTitle') + ending
-      } else {
-        document.title = this.pageTitle + ending
+        middle = ' ‹ ' + parent.get('pageTitle')
       }
+
+      document.title = this.pageTitle + (middle || '') + ' — Muffin'
 
       if (app) {
         app.set('pageTitle', this.pageTitle)

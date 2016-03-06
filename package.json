@@ -45,6 +45,9 @@
     "ember-simple-auth-token": "1.0.0",
     "loader.js": "^4.0.0"
   },
+  "greenkeeper": {
+    "emails": false
+  },
   "bugs": {
     "url": "https://github.com/small-cake/app/issues"
   },

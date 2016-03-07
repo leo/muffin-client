@@ -567,16 +567,10 @@ select {
 
   nav {
     padding: 0 20px;
-    max-height: 0;
-    transition: all 0.3s ease;
-    overflow: hidden;
     border-bottom: 1px solid #F1F1F1;
-
-    &.open {
-      max-height: 100vh;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     a {
       display: block;
@@ -600,11 +594,10 @@ select {
     }
 
     @media (min-width: 992px) {
-      max-height: none;
       border: 0;
+      display: block !important;
       padding: 0;
       float: right;
-      transition: none;
 
       a {
         display: inline-block;

@@ -46,7 +46,28 @@
     "loader.js": "^4.0.0"
   },
   "greenkeeper": {
-    "emails": false
+    "emails": false,
+    "ignore": [
+      "broccoli-asset-rev",
+      "ember-ajax",
+      "ember-cli",
+      "ember-cli-app-version",
+      "ember-cli-babel",
+      "ember-cli-dependency-checker",
+      "ember-cli-htmlbars",
+      "ember-cli-htmlbars-inline-precompile",
+      "ember-cli-inject-live-reload",
+      "ember-cli-qunit",
+      "ember-cli-release",
+      "ember-cli-sri",
+      "ember-cli-uglify",
+      "ember-data",
+      "ember-disable-proxy-controllers",
+      "ember-export-application-global",
+      "ember-load-initializers",
+      "ember-resolver",
+      "loader.js"
+    ]
   },
   "bugs": {
     "url": "https://github.com/small-cake/app/issues"

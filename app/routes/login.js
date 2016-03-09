@@ -3,5 +3,5 @@ import Unauthenticated from 'ember-simple-auth/mixins/unauthenticated-route-mixi
 
 export default Ember.Route.extend(Unauthenticated, {
   pageTitle: 'Login',
-  outer: true,
+  outer: true
 })

@@ -7,8 +7,22 @@ export function initialize () {
     list: false,
     editableTitle: false,
     outer: false,
+    afterModel (record, transition) {
+      if (!record) {
+        return
+      } else {
+        var title = record.get('title')
+      }
+
+      if (!title) {
+        return
+      }
+
+      this.pageTitle = this.pageTitle || title
+      this.editableTitle = true
+    },
     setupController (controller, model) {
-      this._super(controller, model)
+      this._super(...arguments)
 
       var middle = false
 

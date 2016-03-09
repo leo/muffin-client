@@ -7,6 +7,27 @@ export function initialize () {
     list: false,
     editableTitle: false,
     outer: false,
+    activate () {
+      var cssClasses = this.toCSS()
+
+      if (cssClasses !== 'application') {
+        Ember.$('body').addClass(cssClasses)
+      }
+    },
+    deactivate () {
+      Ember.$('body').removeClass(this.toCSS())
+    },
+    toCSS () {
+      var classes = this.routeName.split('.')
+
+      if (this.classNames) {
+        for (var name of this.classNames) {
+          classes.push(name)
+        }
+      }
+
+      return classes.join(' ')
+    },
     afterModel (record, transition) {
       if (!record) {
         return

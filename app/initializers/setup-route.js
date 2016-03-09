@@ -37,11 +37,19 @@ export function initialize () {
 
       document.title = this.pageTitle + (middle || '') + ' — Muffin'
 
-      if (app) {
-        app.set('pageTitle', this.pageTitle)
-        app.set('list', this.list)
-        app.set('editableTitle', this.editableTitle)
-        app.set('outer', this.outer)
+      const properties = [
+        'pageTitle',
+        'list',
+        'editableTitle',
+        'outer'
+      ]
+
+      if (!app) {
+        return
+      }
+
+      for (var property of properties) {
+        app.set(property, this[property])
       }
     }
   })

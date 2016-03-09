@@ -6,6 +6,7 @@ export function initialize () {
     pageTitle: '',
     list: false,
     editableTitle: false,
+    outer: false,
     setupController (controller, model) {
       this._super(controller, model)
 
@@ -26,6 +27,7 @@ export function initialize () {
         app.set('pageTitle', this.pageTitle)
         app.set('list', this.list)
         app.set('editableTitle', this.editableTitle)
+        app.set('outer', this.outer)
       }
     }
   })

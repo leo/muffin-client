@@ -9,4 +9,4 @@ module.exports = {
     "PhantomJS",
     "Chrome"
   ]
-};
+}

@@ -5,6 +5,10 @@ export default Ember.Controller.extend({
   actions: {
     logout() {
       this.get('session').invalidate()
+    },
+    openModal (target) {
+      var modal = this.get('modal-' + target)
+      modal.send('toggleModal')
     }
   }
 })

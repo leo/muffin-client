@@ -11,7 +11,7 @@
         <a href="#" {{action 'logout'}}>Logout</a>
       </nav>
 
-      <a href="/admin" class="logo"></a>
+      <a href="/admin" class="logo" {{action "openModal" "media-modal"}}></a>
 
       {{#toggle-nav}}
         <span>
@@ -68,6 +68,8 @@
     </div>
 
   </footer>
+
+  {{modal-overlay title="Choose an item" type="media-modal"}}
 
 {{else}}
   {{outlet}}

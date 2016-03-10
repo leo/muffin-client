@@ -6,11 +6,11 @@ export default Ember.Component.extend({
   attributeBindings: ['id'],
   id: 'overlay',
 
-  isOpen () {
+  isOpen: function () {
     return this.get('visibility')
-  }.property( 'visibility' ),
+  }.property('visibility'),
 
-  expose () {
+  expose: function () {
     const appController = this.get('targetObject')
     const exposedName = 'modal-' + this.get('type')
 

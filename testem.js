@@ -8,5 +8,10 @@ module.exports = {
   "launch_in_dev": [
     "PhantomJS",
     "Safari"
-  ]
+  ],
+  "proxies": {
+    "/api": {
+      "target": "http://localhost:2000"
+    }
+  }
 }

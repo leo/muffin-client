@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNameBindings: ['isOpen:open'],
   attributeBindings: ['id'],
   id: 'overlay',
+  store: Ember.inject.service(),
 
   isOpen: function () {
     return this.get('visibility')
@@ -18,10 +19,8 @@ export default Ember.Component.extend({
   }.on('init'),
 
   init () {
-    const store = this.get('targetObject.store')
-
     this._super()
-    this.set('model', store.findAll('file'))
+    this.set('model', this.get('store').findAll('file'))
   },
 
   actions: {

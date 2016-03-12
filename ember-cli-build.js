@@ -17,9 +17,6 @@ module.exports = function(defaults) {
     sassOptions: {
       outputStyle: 'expanded',
       sourceMap: false
-    },
-    fingerprint: {
-      enabled: false
     }
   })
 

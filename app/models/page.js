@@ -5,5 +5,9 @@ export default DS.Model.extend({
   author: DS.attr('string'),
   updatedAt: DS.attr('date'),
   content: DS.attr('string'),
-  slug: DS.attr('string')
+  slug: DS.attr('string'),
+  lastUpdated: Ember.computed(function () {
+    var times = ['20', '1h', '5min', '10sec']
+    return times[Math.floor(Math.random() * times.length)]
+  })
 })

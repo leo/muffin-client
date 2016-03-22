@@ -36,27 +36,26 @@
 
   <details class="box" open>
     <summary>Recently updated</summary>
-    <table class="updated">
-      <tr>
-        <td><a href="#">Development</a></td>
-        <td>20min</td>
-      </tr>
-      <tr>
-        <td><a href="#">Home</a></td>
-        <td>23min</td>
-      </tr>
-      <tr>
-        <td><a href="#">Who are we?</a></td>
-        <td>1h</td>
-      </tr>
-    </table>
-  </details>
 
-  <details class="box" open>
-    <summary>Recently updated</summary>
-    <article class="empty">
-      <p>You haven't edited any pages until this point.</p>
-    </article>
+    {{#if model}}
+      <table class="updated">
+        {{#each model as |page|}}
+          <tr>
+            <td>
+              {{#link-to (concat routeName 'pages.edit') page}}
+                {{page.title}}
+              {{/link-to}}
+            </td>
+
+            <td>{{page.lastUpdated}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    {{else}}
+      <article class="empty">
+        <p>You haven't edited any pages until this point.</p>
+      </article>
+    {{/if}}
   </details>
 
 </aside>

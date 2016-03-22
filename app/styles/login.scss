@@ -36,9 +36,7 @@
       &:hover {
         background-color: #B7B7B7;
       }
-
     }
-
   }
 
   form {
@@ -69,7 +67,6 @@
       background-position-y: 30px;
       font-size: 14px;
     }
-
   }
 
   input {
@@ -95,7 +92,6 @@
       padding: 11px;
       margin-bottom: 15px;
     }
-
   }
 
   button {
@@ -139,11 +135,9 @@
     padding: 0;
     justify-content: center;
   }
-
 }
 
 @keyframes shake {
-
   0%, 100% {
     transform: translate3d(0, 0, 0);
   }
@@ -155,5 +149,4 @@
   20%, 40%, 60%, 80% {
     transform: translate3d(10px, 0, 0);
   }
-
 }

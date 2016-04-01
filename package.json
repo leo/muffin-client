@@ -7,14 +7,14 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember build -w -o ../core/dist",
+    "start": "ember build -w -o ../app/dist",
     "test": "ember test",
-    "prepare": "ember build -o ../core/dist -prod",
+    "prepare": "ember build -o ../app/dist -prod",
     "install": "bower install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muffin-cms/client.git"
+    "url": "git+https://github.com/muffinjs/client.git"
   },
   "engines": {
     "node": "latest"
@@ -67,7 +67,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/muffin-cms/app/issues"
+    "url": "https://github.com/muffinjs/app/issues"
   },
   "homepage": "http://muffin.cafe"
 }

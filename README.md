@@ -6,12 +6,12 @@
 
 # muffin
 
-[![Build Status](https://travis-ci.org/muffin-cms/client.svg?branch=master)](https://travis-ci.org/muffin-cms/client)
+[![Build Status](https://travis-ci.org/muffinjs/client.svg?branch=master)](https://travis-ci.org/muffinjs/client)
 
 This repository contains the Ember app that handles muffin's admin area.
 
-While it's definitely a big part of muffin, it's not being treated as a real "package". Every time a new version of muffin gets published, it will simply be included in the [main package](https://github.com/muffin-cms/app). The only reason why it's a separate repo is because it's much cleaner and the folder structure is less deep.
+While it's definitely a big part of muffin, it's not being treated as a real "package". Every time a new version of muffin gets published, it will simply be included in the [main package](https://github.com/muffinjs/app). The only reason why it's a separate repo is because it's much cleaner and the folder structure is less deep.
 
 ## Use me or contribute
 
-If you want to use muffin in one of your projects or help us with development, please read [this](https://github.com/muffin-cms/app#muffin).
+If you want to use muffin in one of your projects or help us with development, please read [this](https://github.com/muffinjs/app#muffin).

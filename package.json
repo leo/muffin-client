@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember build -w -o ../app/client",
+    "start": "ember build -w -o ../app/dist/client",
     "test": "ember test",
-    "prepare": "ember build -o ../app/client -prod",
+    "prepare": "ember build -o ../app/dist/client -prod",
     "install": "bower install"
   },
   "repository": {

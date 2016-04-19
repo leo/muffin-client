@@ -1,6 +1,6 @@
 {
   "name": "muffin",
-  "version": "2.0.0",
+  "version": "1.2.0",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "ember build -w -o ../server/dist/client",
     "test": "ember test",
-    "prepare": "ember build -o ../server/dist/client -prod",
+    "prepublish": "ember build -o ../server/dist/client -prod",
     "install": "bower install"
   },
   "repository": {

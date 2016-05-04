@@ -9,7 +9,7 @@
   "scripts": {
     "start": "ember build -w -o ../server/dist/client",
     "test": "ember test",
-    "prepublish": "ember build -o ../server/dist/client -prod",
+    "prepare": "ember build -o ../server/dist/client -prod",
     "install": "bower install"
   },
   "repository": {

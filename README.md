@@ -4,8 +4,6 @@
   </a>
 </p>
 
-# muffin
-
 [![Build Status](https://travis-ci.org/muffinjs/client.svg?branch=master)](https://travis-ci.org/muffinjs/client)
 
 This repository contains the Ember app that handles muffin's admin area.

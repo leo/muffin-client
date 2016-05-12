@@ -4,8 +4,6 @@
   </a>
 </p>
 
-# muffin
-
 [![Build Status](https://travis-ci.org/muffinjs/client.svg?branch=master)](https://travis-ci.org/muffinjs/client)
 
 This repository contains the Ember app that handles muffin's admin area.
@@ -19,5 +17,3 @@ Read [this](https://github.com/muffinjs/server#use-me) to learn more about how t
 ## Contribute
 
 As stated above, this Ember app won't do much on its own. Rather than that, it needs an API endpoint where it can retrieve its data from. Because of this, you'll have to follow [this guide](https://github.com/muffinjs/server/blob/master/.github/CONTRIBUTING.md) if you want to contribute something.
-
-Don't worry, you only need to do this once for all contributions in the future! :blush:

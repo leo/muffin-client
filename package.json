@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muffinjs/client.git"
+    "url": "git+https://github.com/muffin/client.git"
   },
   "engines": {
     "node": "latest"
@@ -69,7 +69,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/muffinjs/app/issues"
+    "url": "https://github.com/muffin/app/issues"
   },
   "homepage": "http://muffin.cafe"
 }

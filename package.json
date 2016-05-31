@@ -12,10 +12,7 @@
     "prepare": "ember build -o ../server/dist/client -prod",
     "install": "bower install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/muffin/client.git"
-  },
+  "repository": "muffin/client",
   "engines": {
     "node": "latest"
   },

@@ -56,7 +56,7 @@ export function initialize () {
         middle = ' ‹ ' + parent.get('pageTitle')
       }
 
-      document.title = this.pageTitle + (middle || '') + ' — Muffin'
+      document.title = this.pageTitle + (middle || '') + ' — muffin'
 
       const properties = [
         'pageTitle',

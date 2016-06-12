@@ -6,6 +6,11 @@
     "doc": "doc",
     "test": "tests"
   },
+  "author": {
+    "name": "Leo Lamprecht",
+    "email": "mindrun@icloud.com",
+    "url": "http://leo.im"
+  },
   "scripts": {
     "start": "ember build -w -o ../server/dist/client",
     "test": "ember test",
